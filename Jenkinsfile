@@ -1,6 +1,4 @@
-pipeline
-{
-    node {
+node {
     stage('Git pull') 
     {
         git 'https://github.com/ashumesh/s3-bucket.git'
@@ -13,4 +11,4 @@ pipeline
         sh 'aws s3 ls s3://frontend002/ --recursive --human-readable --summarize'
     }
 }
-}
+
